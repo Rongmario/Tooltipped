@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "xyz.risingkingdom.tooltipped.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "MixinItemStack"
+  ]
+}

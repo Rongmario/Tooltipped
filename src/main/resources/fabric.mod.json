@@ -18,6 +18,8 @@
   "environment": "*",
   "entrypoints": {
     "main": [
+    ],
+    "client": [
       "xyz.risingkingdom.tooltipped.Tooltipped"
     ]
   },

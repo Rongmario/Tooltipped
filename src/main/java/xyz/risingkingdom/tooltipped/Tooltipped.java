@@ -1,6 +1,8 @@
 package xyz.risingkingdom.tooltipped;
 
-import net.fabricmc.api.ModInitializer;
+import com.mojang.brigadier.CommandDispatcher;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.registry.CommandRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -9,6 +11,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -16,16 +19,20 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import xyz.risingkingdom.tooltipped.command.RegistryCommand;
 
 import java.util.Collection;
 import java.util.List;
 
-public class Tooltipped implements ModInitializer {
+public class Tooltipped implements ClientModInitializer {
 
     public static final Logger LOGGER = LogManager.getLogger("Rongmario/Tooltipped");
 
+    // public final RegistryCommand REGISTRY_COMMMND = new RegistryCommand();
+
     @Override
-    public void onInitialize() {
+    public void onInitializeClient() {
+        CommandRegistry.INSTANCE.register(false, dispatcher -> RegistryCommand.register(dispatcher));
         LOGGER.info("Tooltipped Initialized...");
     }
 
@@ -81,10 +88,6 @@ public class Tooltipped implements ModInitializer {
             }
             */
         }
-    }
-
-    private static void sortNBTTags() {
-
     }
 
 }

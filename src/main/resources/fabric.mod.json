@@ -4,16 +4,16 @@
   "version": "${version}",
 
   "name": "Tooltipped",
-  "description": "Adds useful tooltips to items in advanced mode",
+  "description": "Adds useful tooltips to items and blocks in advanced mode",
   "authors": [
     "Rongmario"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://discord.gg/HeAmNKD",
+    "sources": "https://github.com/Rongmario/Tooltipped"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
 
   "environment": "*",
   "entrypoints": {
